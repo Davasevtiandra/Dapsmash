@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary, Vivi Nurmaylina</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+        header {
+            background-color: #f54e42;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Georgia', serif;
+        }
+        .content {
+            padding: 50px;
+        }
+        .content h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .timer {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .message {
+            margin-top: 50px;
+            font-size: 1.2em;
+            font-style: italic;
+        }
+        footer {
+            background-color: #f54e42;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Happy Anniversary, Vivi Nurmaylina!</h1>
+</header>
+
+<div class="content">
+    <h2>Celebrating Our Love</h2>
+    <div class="timer">
+        We have been together for: 
+        <span id="timeTogether"></span>
+    </div>
+
+    <div class="gallery">
+        <img src="moment1.jpg" alt="Moment 1">
+        <img src="moment2.jpg" alt="Moment 2">
+        <img src="moment3.jpg" alt="Moment 3">
+        <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
+    </div>
+
+    <div class="message">
+        <p>Dear Vivi,</p>
+        <p>From the day we met on May 21, 2019, my life has been filled with joy, love, and endless memories. You are the most amazing woman I have ever met, and every moment with you is a treasure. Thank you for standing by my side through thick and thin, for your endless support, and for making me a better person every day.</p>
+        <p>Here's to many more anniversaries to come. I love you more than words can express, and I am forever grateful to have you in my life.</p>
+        <p>With all my love,</p>
+        <p>Dava</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Dava Sevtiandra | Made with Love for Vivi Nurmaylina</p>
+</footer>
+
+<script>
+    // Menghitung waktu bersama sejak 21 Mei 2019
+    function calculateTimeTogether() {
+        const startDate = new Date('May 21, 2019');
+        const now = new Date();
+        const diffTime = Math.abs(now - startDate);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        const years = Math.floor(diffDays / 365);
+        const months = Math.floor((diffDays % 365) / 30);
+        const days = diffDays % 30;
+
+        document.getElementById('timeTogether').textContent = `${years} years, ${months} months, and ${days} days`;
+    }
+
+    calculateTimeTogether();
+</script>
+
+</body>
+</html>
